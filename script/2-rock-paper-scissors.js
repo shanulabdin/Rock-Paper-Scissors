@@ -2,6 +2,18 @@ function computerMove(){
   const moves = ['✊', '✋', '✌️'];
   const randomIndex = Math.floor(Math.random() * moves.length);
   return moves[randomIndex];
+
+  const randomNumber = Math.random();
+
+
+  if (randomNumber >= 0 && randomNumber < 1/3){
+    return '✊';
+  } else if (randomNumber >= 1/3 && randomNumber < 2/3){
+    return '✋';
+  } else if (randomNumber >= 2/3 && randomNumber < 1){
+    return '✌️';
+  }
+
 }
 
 function playGame(move){
